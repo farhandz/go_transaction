@@ -23,6 +23,52 @@
 - Jalankan aplikasi dengan docker `docker-compose -f docker-compose-dev.yml up --build`.
 - Akses aplikasi di [http://0.0.0.0:8000/health](http://0.0.0.0:8000/health) untuk pengecekan status.
 
+### Middlewares
+- Use Gin CORSMiddleware
+go
+router := gin.New()
+router.Use(gin.Logger())
+router.Use(gin.Recovery())
+router.Use(middleware.CORSMiddleware())
+
+
+### Code Structure
+<pre>├── <font color="#3465A4"><b>config</b></font>
+│   ├── config.go
+│   ├── db.go
+│   └── server.go
+├── <font color="#3465A4"><b>controllers</b></font>
+│   └── example_controller.go
+├── docker-compose-dev.yml
+├── docker-compose-prod.yml
+├── Dockerfile
+├── Dockerfile-dev
+├── go.mod
+├── go.sum
+├── <font color="#3465A4"><b>helpers</b></font>
+│   ├── response.go
+│   └── search.go
+├── <font color="#3465A4"><b>infra</b></font>
+│   ├── <font color="#3465A4"><b>database</b></font>
+│   │   └── database.go
+│   └── <font color="#3465A4"><b>logger</b></font>
+│       └── logger.go
+├── main.go
+├── Makefile
+├── <font color="#3465A4"><b>migrations</b></font>
+│   └── migration.go
+├── <font color="#3465A4"><b>models</b></font>
+│   └── example_model.go
+├── README.md
+├── <font color="#3465A4"><b>repository</b></font>
+│   └── sql_repo.go
+├── <font color="#3465A4"><b>routers</b></font>
+│   ├── index.go
+│   ├── <font color="#3465A4"><b>middleware</b></font>
+│   │   └── cors.go
+│   └── router.go
+</pre>
+
 ## Database
 
 ### Skema Database

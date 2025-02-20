@@ -18,11 +18,9 @@
 ## Setup Project
 
 ### Persiapan Awal
-- Pastikan memiliki Go terinstal di mesin lokal.
-- Buat project baru dengan `go mod init nama_project`.
+- clone project  dengan `git clone https://github.com/farhandz/go_transaction`.
 - Salin `.env.example` menjadi `.env` dan isi konfigurasi yang dibutuhkan.
-- Jalankan `go get .` untuk menginstal semua dependensi.
-- Jalankan aplikasi dengan `docker-compose -f docker-compose-dev.yml up --build`.
+- Jalankan aplikasi dengan docker `docker-compose -f docker-compose-dev.yml up --build`.
 - Akses aplikasi di [http://0.0.0.0:8000/health](http://0.0.0.0:8000/health) untuk pengecekan status.
 
 ## Database

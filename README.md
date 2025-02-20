@@ -204,12 +204,14 @@ Mengambil ringkasan data transaksi untuk dashboard.
 }
 ```
 
-## Testing
+## Testing (86 coveragge)
 - Gunakan library `testing` bawaan Go atau `testify` untuk unit test.
-- Target coverage minimal 70%.
+- jalankan perinta `docker exec -it dev_go_server sh`
+- kemudian `go test ./controllers -cover`
+- `ok      gin-boilerplate/controllers     (cached)        coverage: 86.7% of statements` result 
 
 ## Bonus
-- Logging: Gunakan `logrus` atau `zap`.
+- Logging:  `logrus`
 - Error Handling: Validasi input, data tidak ditemukan, dll.
 - Pagination: Sudah didukung di endpoint `GET /transactions`.
 
